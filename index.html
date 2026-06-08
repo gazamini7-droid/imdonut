@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>I'm Donut? Korea — 아임도넛 코리아</title>
+<meta name="description" content="Fukuoka-born 'nama' doughnuts, reimagined in Seoul — crisp outside, cloud-soft within. / 후쿠오카에서 시작된 생도넛, 서울에서. 갓 튀겨낸 바삭함과 공기처럼 부드러운 속." />
+<style>
+  :root{
+    --bg:#FAF6F0; --ink:#1A1A1A; --sub:#6B6B6B; --line:#E7DFD4;
+    --accent:#E8543F; --card:#FFFFFF;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Helvetica Neue','Apple SD Gothic Neo','Pretendard',sans-serif;
+    background:var(--bg); color:var(--ink); line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:860px;margin:0 auto;padding:0 24px;}
+  /* HERO */
+  header{padding:90px 0 60px;text-align:center;}
+  .logo{
+    font-size:clamp(44px,9vw,86px);font-weight:800;letter-spacing:-2px;
+    line-height:1;
+  }
+  .logo .q{color:var(--accent);}
+  .tagline{margin-top:18px;font-size:clamp(15px,2.4vw,19px);color:var(--sub);}
+  .tagline .en{display:block;margin-top:6px;font-style:italic;font-size:0.92em;}
+  .cta{
+    margin-top:34px;display:inline-flex;gap:12px;flex-wrap:wrap;justify-content:center;
+  }
+  .btn{
+    display:inline-block;padding:13px 26px;border-radius:40px;
+    font-size:15px;font-weight:600;text-decoration:none;transition:.2s;
+    border:1.5px solid var(--ink);color:var(--ink);
+  }
+  .btn.primary{background:var(--ink);color:#fff;}
+  .btn:hover{transform:translateY(-2px);opacity:.88;}
+  /* SECTION */
+  section{padding:54px 0;border-top:1px solid var(--line);}
+  h2{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:8px;font-weight:700;}
+  h2 .ko{color:var(--sub);letter-spacing:0;text-transform:none;font-weight:500;margin-left:8px;font-size:12px;}
+  .lead{font-size:clamp(19px,3vw,26px);font-weight:600;letter-spacing:-.5px;margin-bottom:14px;}
+  .body{font-size:16px;color:#333;}
+  .body .en{display:block;margin-top:10px;color:var(--sub);font-size:14.5px;font-style:italic;}
+  /* STORES */
+  .stores{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:8px;}
+  .store{
+    background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;
+  }
+  .store h3{font-size:19px;font-weight:700;margin-bottom:4px;}
+  .store .badge{display:inline-block;font-size:11px;font-weight:600;color:#fff;background:var(--accent);border-radius:20px;padding:2px 10px;margin-bottom:10px;}
+  .store .badge.soon{background:var(--sub);}
+  .store p{font-size:14px;color:var(--sub);margin-bottom:3px;}
+  .fill{color:#B8945F;font-weight:600;}
+  /* LINKS */
+  .links{display:flex;gap:12px;flex-wrap:wrap;}
+  .links a{
+    flex:1;min-width:150px;text-align:center;background:var(--card);
+    border:1px solid var(--line);border-radius:14px;padding:18px;
+    text-decoration:none;color:var(--ink);font-weight:600;transition:.2s;
+  }
+  .links a:hover{border-color:var(--ink);transform:translateY(-2px);}
+  .links a span{display:block;font-size:12px;color:var(--sub);font-weight:400;margin-top:3px;}
+  /* FOOTER */
+  footer{padding:50px 0 70px;text-align:center;color:var(--sub);font-size:13px;border-top:1px solid var(--line);}
+  footer .biz{margin-top:10px;font-size:11.5px;line-height:1.8;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="logo">I'm Donut<span class="q">?</span></div>
+    <p class="tagline">
+      후쿠오카에서 시작된 생(生)도넛, 서울에서.
+      <span class="en">Born in Fukuoka, reimagined in Seoul.</span>
+    </p>
+    <div class="cta">
+      <a class="btn primary" href="#stores">매장 찾기 · Locations</a>
+      <a class="btn" href="https://www.instagram.com/imdonut.kor" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>About <span class="ko">브랜드 소개</span></h2>
+    <p class="lead">빵을 사는 곳이 아니라, 빵을 발견하는 즐거움.</p>
+    <p class="body">
+      일본 후쿠오카의 전설적인 베이커리 <strong>AMAM DACOTAN(아맘다코탄)</strong>,
+      그곳의 히라코 셰프가 빚어낸 독점 레시피로 완성한 생(生)도넛.
+      갓 튀겨낸 순간의 바삭한 겉과 공기처럼 부드러운 속 — 그 찰나의 식감을 위해
+      매일 매장에서 직접 반죽하고 튀깁니다. 일본 장인의 철학과 한국의 감성이 만난
+      프리미엄 라이프스타일, 평균 34종의 도넛을 지점마다 다르게 선보입니다.
+      <span class="en">Crafted from the exclusive recipe of chef Hirako of AMAM DACOTAN, Fukuoka's legendary bakery, our <em>nama</em> (raw) doughnuts are kneaded and fried fresh in-store all day — a crackle-crisp shell around an airy, melt-away centre. Japanese artisanship meets Korean sensibility, with an average of 34 kinds curated uniquely at each location.</span>
+    </p>
+  </section>
+
+  <section id="stores">
+    <h2>Locations <span class="ko">매장 안내</span></h2>
+    <p class="lead">서울에서 만나요.</p>
+    <div class="stores">
+      <div class="store">
+        <span class="badge">본점 · Flagship</span>
+        <h3>성수 Seongsu</h3>
+        <p>서울 성동구 연무장길 37-30, 1층</p>
+        <p>37-30 Yeonmujang-gil, Seongdong-gu, Seoul</p>
+      </div>
+      <div class="store">
+        <span class="badge">2호점</span>
+        <h3>홍대 Hongdae</h3>
+        <p>서울 마포구 와우산로21길 14, 1층</p>
+        <p>14 Wausan-ro 21-gil, Mapo-gu, Seoul</p>
+      </div>
+      <div class="store">
+        <span class="badge soon">신규 · New</span>
+        <h3>신세계 강남 Shinsegae Gangnam</h3>
+        <p>서울 서초구 신반포로 176, 신세계백화점 강남점 B1</p>
+        <p>Shinsegae Dept. Store Gangnam B1, 176 Sinbanpo-ro, Seocho-gu, Seoul</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="links">
+    <h2>Find Us <span class="ko">채널 · 길찾기</span></h2>
+    <div class="links">
+      <a href="https://www.instagram.com/imdonut.kor" target="_blank" rel="noopener">Instagram<span>@imdonut.kor · 메뉴 · 소식</span></a>
+      <a href="https://map.naver.com" target="_blank" rel="noopener">네이버 플레이스<span>NAVER Place · 길찾기</span></a>
+      <a href="https://map.kakao.com" target="_blank" rel="noopener">카카오맵<span>Kakao Map · 길찾기</span></a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="logo" style="font-size:28px;">I'm Donut<span class="q">?</span></div>
+    <p style="margin-top:8px;">Operated by Eight Ground Inc. · 에잇그라운드</p>
+    <div class="biz">
+      © 2026 Eight Ground Inc. All rights reserved.<br/>
+      I'm Donut? is operated in Korea under license.
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
