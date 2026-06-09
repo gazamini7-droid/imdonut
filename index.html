@@ -25,7 +25,9 @@
     line-height:1;
   }
   .logo .q{color:var(--accent);}
-  .tagline{margin-top:18px;font-size:clamp(15px,2.4vw,19px);color:var(--sub);}
+  .logo-img{display:block;margin:0 auto;width:clamp(220px,55vw,440px);height:auto;}
+  footer .logo-img{width:150px;}
+  .tagline{margin-top:18px;font-size:clamp(15px,2.4vw,19px);color:var(--accent);}
   .tagline .en{display:block;margin-top:6px;font-style:italic;font-size:0.92em;}
   .cta{
     margin-top:34px;display:inline-flex;gap:12px;flex-wrap:wrap;justify-content:center;
@@ -36,7 +38,8 @@
     border:1.5px solid var(--ink);color:var(--ink);
   }
   .btn.primary{background:var(--ink);color:#fff;}
-  .btn:hover{transform:translateY(-2px);opacity:.88;}
+  .btn:hover{transform:translateY(-2px);border-color:var(--accent);color:var(--accent);}
+  .btn.primary:hover{background:var(--accent);border-color:var(--accent);color:#fff;}
   /* SECTION */
   section{padding:54px 0;border-top:1px solid var(--line);}
   h2{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:8px;font-weight:700;}
@@ -61,7 +64,7 @@
     border:1px solid var(--line);border-radius:14px;padding:18px;
     text-decoration:none;color:var(--ink);font-weight:600;transition:.2s;
   }
-  .links a:hover{border-color:var(--ink);transform:translateY(-2px);}
+  .links a:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px);}
   .links a span{display:block;font-size:12px;color:var(--sub);font-weight:400;margin-top:3px;}
   /* FOOTER */
   footer{padding:50px 0 70px;text-align:center;color:var(--sub);font-size:13px;border-top:1px solid var(--line);}
@@ -72,7 +75,7 @@
 <div class="wrap">
 
   <header>
-    <div class="logo">I'm Donut<span class="q">?</span></div>
+    <img class="logo-img" src="imdonut-logo.png" alt="I'm Donut?" />
     <p class="tagline">
       후쿠오카에서 시작된 생(生)도넛, 서울에서.
       <span class="en">Born in Fukuoka, reimagined in Seoul.</span>
@@ -131,7 +134,7 @@
   </section>
 
   <footer>
-    <div class="logo" style="font-size:28px;">I'm Donut<span class="q">?</span></div>
+    <img class="logo-img" src="imdonut-logo.png" alt="I'm Donut?" />
     <p style="margin-top:8px;">Operated by Eight Ground Inc. · 에잇그라운드</p>
     <div class="biz">
       © 2026 Eight Ground Inc. All rights reserved.<br/>
