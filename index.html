@@ -130,26 +130,11 @@
     <p class="lead">갓 튀겨낸 순간, 그대로.</p>
     <div class="film-stage" id="filmStage">
       <div class="slide active">
-        <video src="assets/video/hongdae-1.mp4" poster="assets/video/hongdae-1.jpg" muted playsinline preload="metadata"></video>
+        <video id="filmVideo" src="assets/video/hongdae-2.mp4" poster="assets/video/hongdae-2.jpg" muted loop playsinline preload="metadata"></video>
         <div class="film-cap">I'm donut? 홍대점</div>
-      </div>
-      <div class="slide">
-        <video src="assets/video/hongdae-2.mp4" poster="assets/video/hongdae-2.jpg" muted playsinline preload="none"></video>
-        <div class="film-cap">I'm donut? 홍대점</div>
-      </div>
-      <div class="slide">
-        <video src="assets/video/hongdae-3.mp4" poster="assets/video/hongdae-3.jpg" muted playsinline preload="none"></video>
-        <div class="film-cap">I'm donut? 홍대점</div>
-      </div>
-      <div class="slide">
-        <video src="assets/video/aespa-collab.mp4" poster="assets/video/aespa-collab.jpg" muted playsinline preload="none"></video>
-        <div class="film-cap">아임도넛 홍대점 × aespa 레몬 콜라보</div>
       </div>
       <button class="mute" id="muteBtn" aria-label="음소거 전환">🔇</button>
-      <button class="nav prev" id="prevBtn" aria-label="이전 영상">‹</button>
-      <button class="nav next" id="nextBtn" aria-label="다음 영상">›</button>
     </div>
-    <div class="dots" id="filmDots"></div>
   </section>
 
   <section id="about">
@@ -212,57 +197,25 @@
 <script>
 (function(){
   var stage=document.getElementById('filmStage');
-  if(!stage)return;
-  var slides=[].slice.call(stage.querySelectorAll('.slide'));
-  var videos=slides.map(function(s){return s.querySelector('video');});
-  var dotsWrap=document.getElementById('filmDots');
+  var v=document.getElementById('filmVideo');
+  if(!stage||!v)return;
   var muteBtn=document.getElementById('muteBtn');
-  var idx=0, muted=true;
+  var muted=true;
 
-  slides.forEach(function(_,i){
-    var b=document.createElement('button');
-    b.className='dot'+(i===0?' active':'');
-    b.setAttribute('aria-label','영상 '+(i+1));
-    b.addEventListener('click',function(){go(i);});
-    dotsWrap.appendChild(b);
-  });
-  var dots=[].slice.call(dotsWrap.children);
-
-  function playActive(){
-    var v=videos[idx];
-    try{v.currentTime=0;}catch(e){}
-    v.muted=muted;
-    var p=v.play();
-    if(p&&p.catch)p.catch(function(){});
-  }
-  function go(n){
-    videos[idx].pause();
-    idx=(n+slides.length)%slides.length;
-    slides.forEach(function(s,i){s.classList.toggle('active',i===idx);});
-    dots.forEach(function(d,i){d.classList.toggle('active',i===idx);});
-    playActive();
-  }
-  videos.forEach(function(v){
-    v.addEventListener('ended',function(){go(idx+1);}); // auto-advance when a clip finishes
-  });
-  document.getElementById('nextBtn').addEventListener('click',function(){go(idx+1);});
-  document.getElementById('prevBtn').addEventListener('click',function(){go(idx-1);});
   muteBtn.addEventListener('click',function(){
-    muted=!muted;
-    videos[idx].muted=muted;
-    muteBtn.textContent=muted?'🔇':'🔊';
+    muted=!muted; v.muted=muted; muteBtn.textContent=muted?'🔇':'🔊';
   });
 
-  // Start playing only when the slider scrolls into view
+  // Autoplay (muted) only while the video is in view
   if('IntersectionObserver' in window){
     var io=new IntersectionObserver(function(entries){
       entries.forEach(function(e){
-        if(e.isIntersecting){playActive();}
-        else{videos[idx].pause();}
+        if(e.isIntersecting){var p=v.play();if(p&&p.catch)p.catch(function(){});}
+        else{v.pause();}
       });
     },{threshold:.4});
     io.observe(stage);
-  }else{playActive();}
+  }else{var p=v.play();if(p&&p.catch)p.catch(function(){});}
 })();
 </script>
 </body>
